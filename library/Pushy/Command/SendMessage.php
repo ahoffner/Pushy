@@ -55,6 +55,7 @@ class SendMessage implements CommandInterface
                 'url'       => $this->message->getUrl(),
                 'url_title' => $this->message->getUrlTitle(),
                 'timestamp' => $this->message->getTimestamp(),
+                'html'      => $this->message->getHtml(),
             ],
             $this->message->getPriority()->getApiParameters()
         );

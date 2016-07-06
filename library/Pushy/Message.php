@@ -75,6 +75,14 @@ class Message
     protected $sound;
 
     /**
+     * Flag indicating if the message is HTML (true) or plain text (false)
+     *
+     * @var boolean
+     */
+    protected $html = true;
+
+
+    /**
      * Instantiate a message object
      *
      * @param string Message message
@@ -296,5 +304,25 @@ class Message
         $this->sound = $sound;
 
         return $this;
+    }
+
+    /**
+     * Get the html flag
+     *
+     * @return boolean
+     */
+    public function getHtml()
+    {
+        return $this->html;
+    }
+
+    /**
+     * Set the html flag
+     *
+     * @param boolean $html
+     */
+    public function setHtml($html)
+    {
+        $this->html = $html;
     }
 }
